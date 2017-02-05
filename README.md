@@ -12,11 +12,10 @@ Before play begins, each player secretly arranges their ships on their primary g
 
 | # | Class of ship | Size |
 | --- | --- | :---:|
-|1|Carrier|5|
-|2|Battleship|4|
-|3|Cruiser|3|
-|4|Submarine|2|
-|5|Destroyer|1|
+|1|Carrier|4|
+|2|Battleship|3|
+|3|Cruiser|2|
+|4|Submarine|1|
 
 ## How to use
 
