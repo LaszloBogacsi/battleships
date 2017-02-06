@@ -14,8 +14,8 @@ var initializeGrid = function(player, rowNum, colNum){
     zeroGrid.push(zeroRows);
     zeroRows = [];
   };
-  this.playerGrid = zeroGrid;
-  this.enemyGrid = zeroGrid;
+  player.playerGrid = zeroGrid;
+  player.enemyGrid = zeroGrid;
   return zeroGrid;
 };
 
@@ -26,8 +26,9 @@ var initializeGrid = function(player, rowNum, colNum){
 //   4: 1
 // };
 
-Player.prototype.setupShips = function (shipsToSetup) {
-  
+Player.prototype.setupShips = function (shipsToSetup, grid, startRow, startCol) {
+  grid[startRow][startCol] = shipsToSetup.size
+
 };
 
 

@@ -27,12 +27,22 @@ describe('Player', function(){
     expect(initializeGrid(player, 10, 10)).toEqual(zeroMemberMatrix);
   });
 
-  it('can place 4 submarines (1 space) randomly', function (){
-    var shipsToSetup = {4:1};
-    player.setupShips(shipsToSetup);
-    expect(player.playerGrid.reduce(function(a, b){
-      return a+b
-    }, 0)).toEqual(4);
-  });
+  it('can place 1 submarine (1 space) to a certain coordinate', function (){
+    var shipsToSetup = {
+      number: 1,
+      size: 1};
+      initializeGrid(player, 10, 10);
 
-});
+      player.setupShips(shipsToSetup, player.playerGrid, 2, 3);
+      const flatten = arr => arr.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []);
+      var oneDimArray = (flatten(player.playerGrid));
+
+      var calculateShipNumber = oneDimArray.reduce(function(a, b){
+        return a + b
+      }, 0)
+      expect(calculateShipNumber).toEqual(1);
+
+      
+    });
+
+  });
